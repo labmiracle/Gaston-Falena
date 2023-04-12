@@ -1,0 +1,4 @@
+¡Hola! Soy Gastón Falena. Mis amigos me dicen Fale. En este momento estoy estudiando programación e ingeniería en sistemas de información. Tengo 26 años, nací el 5 de diciembre de 1996 en la ciudad de Cañada De Gómez. Actualmente estoy viviendo en la ciudad de rosario. Me gusta la informática y sobre todo la programación. He realizado proyectos en javascript,react, node y sql, sin llevar a producción. Estoy aprendiendo inglés, considero que tengo un nivel intermedio. Me encantaría subir mi nivel en todo lo mencionado anteriormente y aprender cómo trabajan los equipos reales, en parte por eso he decidido unirme a Miracle lab. 
+En mi tiempo libre me gusta mucho hacer ejercicio, ver series y jugar.
+Lo ultimo que he aprendido es a realizar mates con montaña, la verdad es que me dio muy buenos resultados.
+
