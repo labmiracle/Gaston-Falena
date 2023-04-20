@@ -25,7 +25,7 @@ console.assert(palabraMasLarga('Erase una vez que se era') === 'Erase');
 //
 function primeraMayuscula(str){
     return str.split(" ").map((letra)=>{
-        return letra.charAt(0).toUpperCase() + letra.slice(1)
-    }).join(" ")
+        return letra.charAt(0).toUpperCase() + letra.slice(1)//charAt+touppercase tomamos y convertimos el primer char en Mayus. Luego concatenamos el resto. slice(1) arranca desde la posicion 1 de la palabra.
+    }).join(" ") //join concatena los elementos con un espacio
 }
 console.assert(primeraMayuscula('En un lugar de la Mancha') === 'En Un Lugar De La Mancha');
