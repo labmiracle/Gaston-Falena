@@ -1,7 +1,7 @@
 // Escriba una función llamadacombineTwoArraysque tome dos arreglos como argumentosy
 //  devuelva un solo arreglo que combine ambos (usando el operador...)
 
-function llamadacombineTwoArrays(array1,array2){
+function combineTwoArrays(array1,array2){
     const arrayComb = [...array1,...array2]
     return arrayComb
     
