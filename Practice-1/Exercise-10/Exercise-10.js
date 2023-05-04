@@ -1,4 +1,4 @@
-// Escriba una función llamadacombineTwoArraysque tome dos arreglos como argumentosy
+// Escriba una función llamada combineTwoArraysque tome dos arreglos como argumentosy
 //  devuelva un solo arreglo que combine ambos (usando el operador...)
 
 function combineTwoArrays(array1,array2){
@@ -9,4 +9,4 @@ function combineTwoArrays(array1,array2){
 
 const array1 = [1,2,3]
 const array2 = [4,5,6]
-console.log(llamadacombineTwoArrays(array1,array2))
+console.log(combineTwoArrays(array1,array2))
