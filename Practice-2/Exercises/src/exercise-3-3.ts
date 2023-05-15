@@ -1,9 +1,9 @@
-function computeScore(word) {
-    const letters = word.toUperCase().split('');
+function computeScore(word: string) {
+    const letters = word.toUpperCase().split('');
     return letters.reduce((accum, curr) => (accum = +getPointsFor(curr)), 0);
 }
-function getPointersFor(letters) {
-    const lettersAndPoints = [
+function getPointsFor(letter: string): number {
+    const lettersAndPoints: [string, number][] = [
         ['AEOIULNRST', 1],
         ['DG', 2],
         ['BCMP', 3],
@@ -12,6 +12,7 @@ function getPointersFor(letters) {
         ['JX', 8],
         ['QZ', 10],
     ];
+
     return lettersAndPoints.reduce(
         (computedScore: number, pointsTuple: [string, number]) => {
             const [letters, score] = pointsTuple;
