@@ -6,4 +6,4 @@ function sumArray(numbers) {
     return numbers.reduce(add, 0);
 }
 const someSum = sumArray(['3', '6', '9']);
-console.log('[Ejercico 3.1]', `3 +6 + 9 ===${someSum}`);
+console.log('[Ejercico 3.1]', `3 +6 + 9 === ${someSum}`);
