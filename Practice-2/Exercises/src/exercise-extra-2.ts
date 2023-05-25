@@ -7,17 +7,17 @@ import promptSync from 'prompt-sync';
 const prompt = promptSync();
 
 function adivinaNumero(): void {
-    let ingresar = '1';
-    const ordenCorrecto = [];
-    const ordenIncorrecto = [];
-    let contador = 0;
-    const numeroMisterioso = [];
+    let ingresar: string = '1';
+    const ordenCorrecto: string[] = [];
+    const ordenIncorrecto: string[] = [];
+    let contador: number = 0;
+    const numeroMisterioso: number[] = [];
     for (let i = 0; i < 4; i++) {
         numeroMisterioso.push(Math.floor(Math.random() * 7));
     }
 
     while (ingresar === '1') {
-        const numeros = [];
+        const numeros: number[] = [];
         while (contador < 4) {
             let numeroS = prompt('Ingrese cuatro números entre 0 y 6: ');
             let numero = parseInt(numeroS);
@@ -37,7 +37,9 @@ function adivinaNumero(): void {
                 }
             }
         }
-        const resultado = ordenCorrecto.concat(ordenIncorrecto).join('');
+        const resultado: string = ordenCorrecto
+            .concat(ordenIncorrecto)
+            .join('');
         console.log(resultado);
         if (resultado === 'XXXX') {
             console.log(
