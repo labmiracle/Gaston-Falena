@@ -1,0 +1,16 @@
+{
+  "name": "exercise-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "biciesto.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8"
+  }
+}
