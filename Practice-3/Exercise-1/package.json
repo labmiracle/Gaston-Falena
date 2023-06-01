@@ -4,7 +4,8 @@
   "description": "",
   "main": "fizzbuzz.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage":"jest --collect-coverage"
   },
   "author": "",
   "license": "ISC",
