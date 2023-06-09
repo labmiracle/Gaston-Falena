@@ -1,0 +1,5 @@
+Explique en qué se diferencian el flujo de trabajo conCSStradicional y conCSSpreprocesado.
+El flujo de trabajo con CSS preprocesado tiene mayor flexibilidad, modularidad y capacidad de mantenimiento.
+Los preprocesadores ayudan a organizar y escribir estilos de manera más eficiente,
+proporcionando características adicionales como variables, mixins, herencia, reglas anidadas y funciones personalizadas.
+Los archivos de CSS preprocesados cuentan con una extensión especial, ".scss" o ".sass" en el caso de Sass

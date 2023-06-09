@@ -1,0 +1,10 @@
+Explique por qué las variables son útiles. Puede consultar el siguiente enlace https://sass-lang.com/documentation/variables.
+
+Las variables una vez que las deifino las puedo utilizar a lo largo de la hoja de estilos,estas comienzan
+con $. Estas permiten reducir la repetición, realizar operaciones matemáticas complejas, 
+configurar bibliotecas y mucho más. 
+Las variables de SASS son diferentes a las variables de CSS. Las variables Sass son imperativas ,
+lo que significa que si usa una variable y luego cambia su valor, el uso anterior seguirá siendo el mismo.
+LAS VARIABLES CSS son declarativas ,
+lo que significa que si cambia el valor, afectará tanto a los usos anteriores como a los posteriores.
+Las variables en Sass tratan como identicos - y _.
