@@ -1,0 +1,12 @@
+$primary-color: #ff0000;
+$secondary-color: #00ff00;
+
+.header {
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+.footer {
+  background-color: $secondary-color;
+  color: $primary-color;
+}

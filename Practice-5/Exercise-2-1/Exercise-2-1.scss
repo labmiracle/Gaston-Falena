@@ -1,0 +1,29 @@
+@mixin agregaPrefijo($prop, $value) { // añade los prefijos dependiendo del navegador
+    @if $prefijo == '-webkit-' {
+      -webkit-#{$prop}: $value;
+    }
+    @if $prefijo == '-moz-' {
+      -moz-#{$prop}: $value;
+    }
+    @if $prefijo == '-ms-' {
+      -ms-#{$prop}: $value;
+    }
+    @if $prefijo == '-o-' {
+      -o-#{$prop}: $value;
+    }
+    #{$prop}: $value;
+  }
+  
+  @mixin agregaMargin($margin) {
+    margin: $margin;
+  }
+  
+  @mixin agregaPadding($padding) {
+    padding: $padding;
+  }
+  
+  @mixin agregaPropBordes($width, $style, $color) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+  }

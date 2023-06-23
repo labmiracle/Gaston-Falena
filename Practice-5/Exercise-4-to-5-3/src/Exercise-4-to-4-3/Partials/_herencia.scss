@@ -1,0 +1,33 @@
+%btn-base {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+// Estilos específicos para cada tipo de botón
+.btn-primary {
+  @extend %btn-base;
+  background-color: #007bff;
+  color: #ffffff;
+  
+}
+
+.btn-secondary {
+  @extend %btn-base;
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.btn-success {
+  @extend %btn-base;
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.btn-danger {
+  @extend %btn-base;
+  background-color: #dc3545;
+  color: #ffffff;
+}
