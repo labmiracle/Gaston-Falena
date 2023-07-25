@@ -1,4 +1,4 @@
-import React, { ComponentType, useEffect, useState } from 'react';
+import { ComponentType, useEffect, useState } from 'react';
 import axios from 'axios';
 
 interface Post {
