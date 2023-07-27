@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface Todo {
     id: number;
@@ -7,8 +7,9 @@ interface Todo {
     completed: boolean;
 }
 
-export default function TodoList() {
+export default function useFetchTodos() {
     const [todos, setTodos] = useState<Todo[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchTodos = async () => {
@@ -18,29 +19,15 @@ export default function TodoList() {
                 );
                 const data = await response.json();
                 setTodos(data);
+                setLoading(false);
             } catch (error) {
                 console.error('Error fetching todos:', error);
+                setLoading(false);
             }
         };
 
         fetchTodos();
     }, []);
 
-    return (
-        <div>
-            <ul>
-                {todos.map(todo => (
-                    <li
-                        key={todo.id}
-                        style={{
-                            backgroundColor: todo.completed ? 'green' : 'red',
-                        }}
-                    >
-                        {todo.title} -{' '}
-                        {todo.completed ? 'Completado' : 'Pendiente'}
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+    return { todos, loading };
 }
