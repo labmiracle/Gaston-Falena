@@ -44,3 +44,17 @@ const textoCodificadoResultado = codificarTexto(
 
 console.log('Texto original:', textoParaCodificar);
 console.log('Texto codificado:', textoCodificadoResultado);
+
+//parte 2
+
+function invertirTexto(texto: string): string {
+    return texto.split('').reverse().join('');
+}
+
+const textoInvertido = invertirTexto(textoParaCodificar);
+const textoInvertidoCodificado = codificarTexto(
+    textoInvertido,
+    mapaCodificacion
+);
+console.log('Texto invertido', textoInvertido);
+console.log('Texto codificado', textoInvertidoCodificado);
