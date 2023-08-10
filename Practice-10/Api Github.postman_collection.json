@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "d36eaf7d-b94e-423c-9158-c12f82eff306",
+		"name": "Api Github",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18928414",
+		"_collection_link": "https://galactic-rocket-617727.postman.co/workspace/MiracleLab~263e0741-2736-4cb5-8413-30f8e08ce3b1/collection/18928414-d36eaf7d-b94e-423c-9158-c12f82eff306?action=share&creator=18928414&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Check health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/zen",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"zen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user public",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/{{username}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{username}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user private",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Repository",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"MiracleLab API Repo\",\r\n\"private\": true,\r\n\"auto_init\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/repos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an issue",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\": \"New logo\",\r\n\"body\": \"We should have one\",\r\n\"labels\": []\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/repos/:user/:repoName/issues",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"repos",
+						":user",
+						":repoName",
+						"issues"
+					],
+					"variable": [
+						{
+							"key": "user",
+							"value": "gastonfalena"
+						},
+						{
+							"key": "repoName",
+							"value": "MiracleLab-API-Repo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Repo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/repos/:user/:repoName",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"repos",
+						":user",
+						":repoName"
+					],
+					"variable": [
+						{
+							"key": "user",
+							"value": "gastonfalena"
+						},
+						{
+							"key": "repoName",
+							"value": "MiracleLab-API-Repo"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "gastonfalena",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "https://api.github.com",
+			"type": "string"
+		},
+		{
+			"key": "repoName",
+			"value": "MiracleLab-API-Repo",
+			"type": "string"
+		}
+	]
+}
