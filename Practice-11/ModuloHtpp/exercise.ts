@@ -13,7 +13,7 @@ const server = http.createServer((req, res) => {
         res.end('<h1>Sobre Nosotros!</h1>\n');
     } else {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('Página no encontrada\n');
+        res.end('Pagina no encontrada');
     }
     console.log('Método:', req.method);
     console.log('URL:', req.url);
