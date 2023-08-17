@@ -1,0 +1,46 @@
+$primary-color: #3498db;
+$warning-color: #e74c3c;
+
+@mixin alert-box($color) {
+  background-color: $color;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.alert {
+  &.primary {
+    @include alert-box($primary-color);
+  }
+
+  &.warning {
+    @include alert-box($warning-color);
+  }
+}
+$base-font-size: 16px;
+
+@mixin responsive-font($size) {
+  @if $size > 0 {
+    font-size: $size * 1px;
+  } @else {
+    font-size: $base-font-size;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  @include responsive-font(18);
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  @include responsive-font(24);
+}
+
+h2 {
+  font-family: Times New Roman, serif;
+  @include responsive-font(20);
+}
+
+
+

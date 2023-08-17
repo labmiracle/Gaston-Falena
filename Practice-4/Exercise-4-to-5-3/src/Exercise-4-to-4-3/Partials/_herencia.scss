@@ -6,7 +6,6 @@
   font-weight: bold;
 }
 
-// Estilos específicos para cada tipo de botón
 .btn-primary {
   @extend %btn-base;
   background-color: #007bff;

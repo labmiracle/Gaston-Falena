@@ -1,0 +1,28 @@
+$days-of-week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
+@function get-day-color($day) {
+  @if $day == "Monday" {
+    @return blue;
+  } @else if $day == "Tuesday" {
+    @return green;
+  } @else if $day == "Wednesday" {
+    @return orange;
+  } @else if $day == "Thursday" {
+    @return red;
+  } @else if $day == "Friday" {
+    @return purple;
+  } @else if $day == "Saturday" {
+    @return teal;
+  } @else if $day == "Sunday" {
+    @return pink;
+  } @else {
+    @return black; 
+  }
+}
+@for $i from 1 through length($days-of-week) {
+  $day: nth($days-of-week, $i);
+  .#{$day} {
+    background-color: get-day-color($day);
+    color: white;
+    padding: 10px;
+  }
+}
